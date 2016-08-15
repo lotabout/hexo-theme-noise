@@ -19,3 +19,9 @@ duoshuo: #duoshuo_shortname
 disqus: #disqus _shortname
 google_analytics: #Google Analytics Tracking Code
 google_adsense_page_level_ads: #Google Adsense Page Level Ads Code
+
+less:
+  paths:
+    - source/css
+  compress:
+    true

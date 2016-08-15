@@ -1,41 +1,82 @@
 extends base
 - var current_title = page.title || tag.name || category.name || site.title
 
+
+
 block title
   title= config.title + " | " + config.subtitle
 
 block main
 
-  article
-    #index-main.container.entries
-      for post in page.posts.toArray()
-        .post-entry
-          .post-time= post.date.format(config.date_format)
-          .post-desc
-            .post-title
-              if post.link
-                  a(href=url_for(post.link),target="_blank", itemprop="url")= post.title
-              else
-                  a(href=url_for(post.path))= post.title
+    // Blog title and subtitle
+    header: .container.header
+      a#logo.title(href=url_for('.'))= config.title
+      span.subtitle= config.subtitle
+      label#toggle-menu(for="menu", onclick)
+        i.fa.fa-bars
 
-            .post-content
-              if post.description
-                != post.description
-              else if post.excerpt
-                != post.excerpt
-              else if post.content
-                - var br = post.content.indexOf('</p>')
-                if br < 0
-                  != post.content
+    // use checkbox hack for toggle nav-bar on small screens
+    input#menu(type="checkbox")
+
+    // Navigation Links
+    nav#nav
+      .container
+        each nav, name in theme.menu
+          +a_with_current(nav, __(name))
+
+    #header-margin-bar
+
+    article
+      #index-main.container.entries
+        for post in page.posts.toArray()
+          .post-entry
+            .post-time= post.date.format(config.date_format)
+            .post-desc
+              .post-title
+                if post.link
+                    a(href=url_for(post.link),target="_blank", itemprop="url")= post.title
                 else
-                  != post.content.substring(0, br + 4)
+                    a(href=url_for(post.path))= post.title
 
-            .post-meta
-              if (post.tags && post.tags.length)
-                .post-tags
-                  != list_tags(post.tags, {show_count: false, class: 'post-tag', style:'none', separator:'/'})
-              if (post.categories && post.categories.length)
-                .post-categories
-                  != list_categories(post.categories, {show_count: false, class: 'post-category', style: 'none', separator: '>'})
+              .post-content
+                if post.description
+                  != post.description
+                else if post.excerpt
+                  != post.excerpt
+                else if post.content
+                  - var br = post.content.indexOf('</p>')
+                  if br < 0
+                    != post.content
+                  else
+                    != post.content.substring(0, br + 4)
 
-  include _partial/paginator.jade
+              .post-meta
+                if (post.tags && post.tags.length)
+                  .post-tags
+                    != list_tags(post.tags, {show_count: false, class: 'post-tag', style:'none', separator:'/'})
+                if (post.categories && post.categories.length)
+                  .post-categories
+                    != list_categories(post.categories, {show_count: false, class: 'post-category', style: 'none', separator: '>'})
+
+    include _partial/paginator.jade
+
+    footer#footer
+      .container
+        .bar
+          .social
+            +social_icon('email', "mailto:", "fa-envelope-o")
+            +social_icon('twitter', 'http://twitter.com/', 'fa-twitter')
+            +social_icon('github', 'https://github.com/', 'fa-github')
+            +social_icon('googleplus', 'https://plus.google.com/', 'fa-google-plus')
+            +social_icon('rss', "", "fa-rss")
+
+          .footer
+            - var year = date(new Date(), 'YYYY');
+            = '© ' + year + ' '
+            a(href='/', rel='nofollow')= config.title
+            = '. Powered by '
+            a(rel='nofollow', target='_blank', href='https://hexo.io') Hexo
+            = '. Theme '
+            a(target='_blank', href='https://github.com/lotabout/very-simple') very-simple
+            |.
+
