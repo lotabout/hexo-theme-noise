@@ -13,7 +13,7 @@ timezone:
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://lotabout.github.io
-root: /very-simple/
+root: /hexo-theme-noise/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -63,13 +63,13 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: very-simple
+theme: noise
 
 
-very_simple:
+noise:
   menu:
     ## If your site is put in a subdirectory, set Home as '/child/'
-    Home: /very-simple/
+    Home: /noise/
     Archives: archives
     About: about.html
 
@@ -78,7 +78,7 @@ very_simple:
     twitter:
     github: lotabout
     googleplus:
-    rss: /very-simple/atom.xml
+    rss: /noise/atom.xml
 
   # Content
   fancybox: true # set to true if you want to use it
@@ -90,5 +90,5 @@ very_simple:
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/lotabout/very-simple
+  repo: https://github.com/lotabout/noise
   branch: gh-pages
