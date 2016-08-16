@@ -14,7 +14,7 @@ install:
 script:
 - git submodule init
 - git submodule update
-- cd themes/very-simple
+- cd themes/noise
 - git remote update
 - git reset --hard origin/master
 - cd ../..
