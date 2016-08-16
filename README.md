@@ -1,5 +1,7 @@
 # Noise
 
+[Demo](http://lotabout.github.io/hexo-theme-noise/)
+
 Noise theme is based on very-simple, creatd by [lotabout](https://github.com/lotabout)
 
 ## Installation
