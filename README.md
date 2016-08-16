@@ -1,26 +1,24 @@
-# very-simple
+# Noise
 
-[Demo](http://lotabout.github.io/very-simple/)
-
-A theme that aimed to be very simple, creatd by [lotabout](https://github.com/lotabout)
+Noise theme is based on very-simple, creatd by [lotabout](https://github.com/lotabout)
 
 ## Installation
 
 Install theme and renderers:
 
 ```
-git clone https://github.com/lotabout/very-simple themes/very-simple
-npm install hexo-renderer-sass --save
+git clone https://github.com/lotabout/hexo-theme-noise themes/noise
+npm install hexo-renderer-less --save
 npm install hexo-renderer-jade --save
 ```
 
-Edit `_config.yml` in hexo root, change `theme` to `very-simple`.
+Edit `_config.yml` in hexo root, change `theme` to `noise`.
 
 ## Configuration
 Default config:
 
 ```
-# very-simple/_config.yml
+# noise/_config.yml
 menu:
   Home: /
   Archives: archives
@@ -48,12 +46,12 @@ disqus: #disqus _shortname
 
 If you want to contain this theme only as a submodule, then you may be
 unwilling to keep all configuration inside theme
-folder(`very-simple/_config.yml`). In this case, you can keep the
+folder(`noise/_config.yml`). In this case, you can keep the
 configurations in root configuration file `/_config.yml` by:
 
 ```
 # /_config.yml
-very_simple:
+noise:
   menu:
     Home: /
     Archives: archives
