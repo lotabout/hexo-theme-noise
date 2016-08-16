@@ -27,7 +27,7 @@
  * responsive breaks
  */
 @break-level-1: 320px;
-@break-level-2: 414px;
+@break-level-2: 425px;
 @break-level-3-1: 680px;
 @break-level-3: 768px;
 @break-level-4: 900px; // > 900px timeline will work.
@@ -45,49 +45,85 @@ body {
     }
 }
 
-.post {
-    border: 1px solid lightgray;
-    box-shadow: 0 0 2px lightgray;
-    background: white;
-    color: #333;
-    max-width: 960px;
-    margin: 5% auto;
-    padding: 3% 6%;
-    text-align: justify;
-
+.wrapper{
+    max-width: 800px;
+    margin: 0 auto;
     @media only screen and (max-width: @break-level-6) {
         max-width: 800px;
     }
-
     @media only screen and (max-width: @break-level-5) {
         max-width: 680px;
-        margin: auto;
     }
 
     @media only screen and (max-width: @break-level-3) {
         max-width: auto;
+    }
+}
+
+.post-main {
+    border: 1px solid lightgray;
+    box-shadow: 0 0 2px lightgray;
+    background: white;
+    color: #333;
+    margin: 5% auto;
+    padding: 3% 6%;
+    text-align: justify;
+    position: relative;
+
+    @media only screen and (max-width: @break-level-5) {
         margin: auto;
+    }
+
+    @media only screen and (max-width: @break-level-3) {
         padding: 25px 50px;
         text-align: initial;
     }
 
     @media only screen and (max-width: @break-level-2) {
-        padding: 0;
+        padding: 25px 0 0 0;
     }
 }
 
-.post-meta {
+.nav {
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
-    margin-bottom: 2em;
-    color: @color-ignore;
-}
 
-.post-tag-link {
-    color: @color-ignore;
-    margin: 0 4px;
-    &::before {
-        content: '#';
+    @media only screen and (max-width: @break-level-2) {
+        flex-wrap: wrap;
+    }
+
+    .post-meta {
+        color: @color-ignore;
+    }
+
+    .post-tag-link {
+        color: @color-ignore;
+        margin: 0 4px;
+        &::before {
+            content: '#';
+        }
+    }
+
+    .post-tags {
+        display: inline-block;
+    }
+
+    .post-time {
+        display: inline-block;
+        font-size: 0.8em;
+        padding-left: 4px;
+    }
+
+    .sidebar-nav-item {
+        text-decoration: none;
+        color: @color-ignore;
+        margin: 0 4px;
+
+        &:hover {
+            color: @color-main-link;
+            border-color: @color-main-link;
+        }
     }
 }
 
@@ -99,7 +135,7 @@ h2 {
 
 
 @media screen and (min-width: 100em) {
-    .post p {
+    .post-main p {
         padding: .25em 0;
     }
 }
