@@ -90,5 +90,5 @@ noise:
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/lotabout/noise
+  repo: https://github.com/lotabout/hexo-theme-noise
   branch: gh-pages
