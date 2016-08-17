@@ -2,7 +2,14 @@
 
 [Demo](http://lotabout.github.io/hexo-theme-noise/)
 
-Noise theme is based on very-simple, creatd by [lotabout](https://github.com/lotabout)
+Noise theme is based on very-simple, creatd by [lotabout](https://github.com/lotabout).
+
+A little preview:
+
+![noise-index](https://cloud.githubusercontent.com/assets/1527040/17722037/97b09bd2-6461-11e6-81f7-990c0bc269f1.png)
+
+![noise-hello](https://cloud.githubusercontent.com/assets/1527040/17722048/b50f6af0-6461-11e6-9169-f3ed402161f3.png)
+
 
 ## Installation
 
