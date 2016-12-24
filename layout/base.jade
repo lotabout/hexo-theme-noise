@@ -6,7 +6,7 @@ else
 if (config.root != '/')
   - var root = config.root
 else
-  - var root = ''
+  - var root = '/'
 
 if config.feed
   case config.feed.type
@@ -31,9 +31,9 @@ html
     meta(content="telephone=no", name="format-detection")
     meta(name="description", content=config.description)
     block title
-    link(rel='stylesheet', type='text/css', href=root + '/css/normalize.css')
-    link(rel='stylesheet', type='text/css', href=root + '/css/highlight.css')
-    link(rel='stylesheet', type='text/css', href=root + '/css/noise.css')
+    link(rel='stylesheet', type='text/css', href=root + 'css/normalize.css')
+    link(rel='stylesheet', type='text/css', href=root + 'css/highlight.css')
+    link(rel='stylesheet', type='text/css', href=root + 'css/noise.css')
     link(rel='stylesheet', type='text/css', href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css")
     link(rel='Shortcut Icon', type='image/x-icon',href=url_for('favicon.ico'))
     link(rel='stylesheet', type='text/css', href='//fonts.useso.com/css?family=Lato')
