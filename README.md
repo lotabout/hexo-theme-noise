@@ -113,6 +113,7 @@ Just add `comments: true` or `comments: false` in `front-matter` section of
 page. i.e.
 
 ```
+---
 title: About
 date: 2013-12-26 22:52:56
 layout: page
