@@ -2,15 +2,29 @@ extends base
 block title
   title= page.title + " | " + config.title
 
-
 block main
-  .wrapper
-    .container.post-header
-      h1: = page.title
-  article
-    .container.post
-      != page.content
+  // Blog title and subtitle
+  header.wrapper.header
+    .container.blog-title
+      a#logo.title(href=url_for('.'))= config.title
+      span.subtitle= config.subtitle
+      label#toggle-menu(for="menu", onclick)
+        i.fa.fa-bars
+    // use checkbox hack for toggle nav-bar on small screens
+    input#menu(type="checkbox")
+    .container.nav-items
+      each nav, name in theme.menu
+        +a_with_current(nav, __(name))
+
+  article.wrapper
+    .post-entry
+      .post
+        .container.post-header
+          h1: = page.title
+
+        .container.post-content
+          != page.content
+
     if page.comments
-      .container
-        hr
+      .post-main.post-comment
         include _partial/comments
