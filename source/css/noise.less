@@ -184,7 +184,7 @@ article {
 
     // blockquote
     blockquote {
-        margin-left: 1em;
+        margin-left: 0;
         padding: 0 @article-padding;
         border-left: 5px solid @color-underscore;
 
@@ -196,6 +196,10 @@ article {
                 padding: 0 0.5em;
                 font-style: italic;
             }
+        }
+
+        ol, ul {
+            padding-left: inherit;
         }
     }
 
@@ -443,7 +447,7 @@ article {
         align-items: center;
         justify-content: center;
         color: gray;
-        
+
         a {
             display: inline-block;
             padding: 0 6px;
