@@ -1,11 +1,11 @@
-extends base
+extends base.pug
 
 block title
   title= page.title + " | " + config.title
 
 block main
 
-  // gallery that comes before the header
+  //- gallery that comes before the header
   if page.photos
      if page.photos.length
       .article-gallery
