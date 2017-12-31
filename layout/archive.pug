@@ -1,4 +1,4 @@
-extends base
+extends base.pug
 
 block title
   if page.category
@@ -53,4 +53,4 @@ block main
                     a(href=url_for(post.path), title=post.title)
                       = post.title
 
-  include _partial/paginator.jade
+  include _partial/paginator.pug

@@ -1,4 +1,5 @@
 extends base
+
 block title
   title= page.title + " | " + config.title
 
@@ -27,4 +28,4 @@ block main
 
     if page.comments
       .post-main.post-comment
-        include _partial/comments
+        include _partial/comments.pug
