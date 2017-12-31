@@ -1,7 +1,5 @@
 extends base.pug
 
-//- - var current_title = page.title || tag.name || category.name || site.title
-
 block title
   title= config.title + " | " + config.subtitle
 
@@ -19,7 +17,6 @@ block main
       .container.nav-items
         each nav, name in theme.menu
           +a_with_current(nav, __(name))
-
 
     article.wrapper
       #index-main.container.entries
@@ -70,4 +67,3 @@ block main
         = '. Theme '
         a(target='_blank', href='https://github.com/lotabout/hexo-theme-noise') noise
         |.
-
