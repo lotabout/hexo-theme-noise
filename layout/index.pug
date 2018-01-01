@@ -1,26 +1,22 @@
-extends base
-- var current_title = page.title || tag.name || category.name || site.title
-
-
+extends base.pug
 
 block title
   title= config.title + " | " + config.subtitle
 
 block main
 
-    // Blog title and subtitle
+    //- Blog title and subtitle
     header.wrapper.header
       .container.blog-title
         a#logo.title(href=url_for('.'))= config.title
         span.subtitle= config.subtitle
         label#toggle-menu(for="menu", onclick)
           i.fa.fa-bars
-      // use checkbox hack for toggle nav-bar on small screens
+      //- use checkbox hack for toggle nav-bar on small screens
       input#menu(type="checkbox")
       .container.nav-items
         each nav, name in theme.menu
           +a_with_current(nav, __(name))
-
 
     article.wrapper
       #index-main.container.entries
@@ -51,7 +47,7 @@ block main
                     != list_tags(post.tags, {show_count: false, class: 'post-tag', style:'none', separator:''})
                 .post-time= post.date.format(config.date_format)
 
-    include _partial/paginator.jade
+    include _partial/paginator.pug
 
     footer.footer.wrapper
       .social
@@ -71,4 +67,3 @@ block main
         = '. Theme '
         a(target='_blank', href='https://github.com/lotabout/hexo-theme-noise') noise
         |.
-

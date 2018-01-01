@@ -18,7 +18,7 @@ Install theme and renderers:
 ```
 git clone https://github.com/lotabout/hexo-theme-noise themes/noise
 npm install hexo-renderer-less --save
-npm install hexo-renderer-jade --save
+npm install hexo-renderer-pug --save
 ```
 
 Edit `_config.yml` in hexo root, change `theme` to `noise`.
