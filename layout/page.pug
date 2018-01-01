@@ -1,16 +1,17 @@
-extends base
+extends base.pug
+
 block title
   title= page.title + " | " + config.title
 
 block main
-  // Blog title and subtitle
+  //- Blog title and subtitle
   header.wrapper.header
     .container.blog-title
       a#logo.title(href=url_for('.'))= config.title
       span.subtitle= config.subtitle
       label#toggle-menu(for="menu", onclick)
         i.fa.fa-bars
-    // use checkbox hack for toggle nav-bar on small screens
+    //- use checkbox hack for toggle nav-bar on small screens
     input#menu(type="checkbox")
     .container.nav-items
       each nav, name in theme.menu
@@ -27,4 +28,4 @@ block main
 
     if page.comments
       .post-main.post-comment
-        include _partial/comments
+        include _partial/comments.pug
