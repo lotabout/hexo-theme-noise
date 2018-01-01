@@ -81,7 +81,7 @@ noise:
   google_adsense_page_level_ads: #Google Adsense Page Level Ads Code
 ```
 
-##Features
+## Features
 
 #### Logo
 You can set a **favicon.ico** for your website, please put it into  `source` folder of hexo directory, recommended size: 32px*32px.
