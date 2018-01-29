@@ -30,6 +30,23 @@ body {
 
 h1,h2,h3,h4,h5,h6 {
     font-family: @font-header;
+    position: relative;
+
+    &:hover .header-anchor {
+        visibility: visible;
+    }
+
+    .header-anchor {
+        visibility: hidden;
+        position: absolute;
+        right: 100%;
+        color: @color-ignore;
+        border: none;
+
+        &:hover {
+            border: none;
+        }
+    }
 }
 
 .wrapper{
@@ -302,6 +319,11 @@ article {
         img {
             width: 100%;
         }
+    }
+
+    hr {
+        border: none;
+        border-bottom: 1px solid lightgray;
     }
 }
 
