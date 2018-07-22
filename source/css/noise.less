@@ -180,11 +180,15 @@ h2 {
 
 article {
     img, video {
-        margin: 0 auto;
         max-width: 100%;
         border: 1px solid lightgray;
+        display: block;
     }
 
+    img.center, video.center {
+        margin: 0 auto;
+        display: block;
+    }
 
     a {
         color: @color-main-link;
