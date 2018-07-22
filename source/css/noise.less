@@ -32,7 +32,7 @@ h1,h2,h3,h4,h5,h6 {
     font-family: @font-header;
     position: relative;
 
-    &:hover .header-anchor {
+    &:hover .header-anchor::after {
         visibility: visible;
     }
 
@@ -47,6 +47,18 @@ h1,h2,h3,h4,h5,h6 {
             border: none;
         }
     }
+}
+
+h2 .header-anchor::after {
+    content: '# ';
+}
+
+h3 .header-anchor::after {
+    content: '## ';
+}
+
+h4 .header-anchor::after {
+    content: '### ';
 }
 
 .wrapper{
