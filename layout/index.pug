@@ -47,7 +47,8 @@ block main
                     != list_tags(post.tags, {show_count: false, class: 'post-tag', style:'none', separator:''})
                 .post-time= post.date.format(config.date_format)
 
-    include _partial/paginator.pug
+    if !theme.infinite_scroll
+      include _partial/paginator.pug
 
     footer.footer.wrapper
       .social
@@ -67,3 +68,7 @@ block main
         = '. Theme '
         a(target='_blank', href='https://github.com/lotabout/hexo-theme-noise') noise
         |.
+
+    if theme.infinite_scroll
+      script(src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js")
+      script(src=root + 'js/noise.js')
