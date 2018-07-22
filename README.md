@@ -38,6 +38,7 @@ social:
   googleplus:
   rss: /atom.xml
 fancybox: true
+infinite_scroll: false
 duoshuo: #duoshuo_shortname
 disqus: #disqus _shortname
 google_analytics: #Google Analytics Tracking Code
@@ -52,10 +53,11 @@ google_adsense_page_level_ads: #Google Adsense Page Level Ads Code
   - googleplus - Google Plus account
   - rss - RSS subscription link, learn more in [hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed)
 - fancybox - Enable [Fancybox](http://fancyapps.com/fancybox/)
+- infinite_scroll - Enable infinite scroll on index page
 - duoshuo - [Duoshuo](http://duoshuo.com) shortname
 - disqus - [Disqus](https://disqus.com) shortname
 - google_analytics - Google Analytics Tracking Code
-- google_adsense_page_level_ads: - Google Adsense Page Level Ads Code
+- google_adsense_page_level_ads - Google Adsense Page Level Ads Code
 
 If you want to contain this theme only as a submodule, then you may be
 unwilling to keep all configuration inside theme
