@@ -1,14 +1,32 @@
 var nextPage = 2;
 var loading = false;
-var postsPerPage = $('.post-entry').length
+var postsPerPage = $('.post-entry').length;
 var allPagesFetched = false;
+var loadingHTML = '<div class="loading"><div class="spinner"><div></div><div></div><div></div></div></div>';
+var loading = false;
+
+function startLoading() {
+  loading = true;
+  $('.entries').parent().append(loadingHTML)
+}
+
+function stopLoading() {
+  loading = false;
+  if ($('.loading')) {
+    $('.loading').remove()
+  }
+}
+
+function isLoading() {
+  return loading;
+}
 
 function appendPage() {
-  if (allPagesFetched || loading) {
+  if (allPagesFetched || isLoading()) {
     return;
   }
 
-  loading = true;
+  startLoading();
 
   $.get('/page/' + nextPage)
     .fail(function () {
@@ -26,12 +44,12 @@ function appendPage() {
       }
     })
     .always(function () {
-      loading = false;
-    })
+      stopLoading();
+    });
 }
 
 $(window).scroll(function () {
-   if ($(window).scrollTop() >= $(document).height() - $(window).height() - 10) {
+   if ($(window).scrollTop() >= $(document).height() - $(window).height() - 16) {
      appendPage();
    }
 });
