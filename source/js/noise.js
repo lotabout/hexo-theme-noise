@@ -28,7 +28,7 @@ function appendPage() {
 
   startLoading();
 
-  $.get('/page/' + nextPage)
+  $.get('/page/' + nextPage + '/')
     .fail(function () {
       allPagesFetched = true;
     })
