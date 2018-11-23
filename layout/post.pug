@@ -29,6 +29,13 @@ block main
       .container.post-header
         h1: = page.title
 
+      if (theme.show_toc_by_default && typeof page.toc === 'undefined') || page.toc
+        .container.post-toc
+          details.toc
+            summary.toc-accordion
+              = theme.toc_words
+            != toc(page.content)
+
       .container.post-content
         != page.content
 

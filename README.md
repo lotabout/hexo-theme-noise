@@ -39,6 +39,8 @@ social:
   rss: /atom.xml
 fancybox: true
 infinite_scroll: false
+show_toc: true
+toc_words: "Table of Contents"
 duoshuo: #duoshuo_shortname
 disqus: #disqus _shortname
 google_analytics: #Google Analytics Tracking Code
@@ -54,6 +56,8 @@ google_adsense_page_level_ads: #Google Adsense Page Level Ads Code
   - rss - RSS subscription link, learn more in [hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed)
 - fancybox - Enable [Fancybox](http://fancyapps.com/fancybox/)
 - infinite_scroll - Enable infinite scroll on index page
+- show_toc - To show ToC if no `toc:` is specified in post
+- toc_words - The words to show in the TOC line
 - duoshuo - [Duoshuo](http://duoshuo.com) shortname
 - disqus - [Disqus](https://disqus.com) shortname
 - google_analytics - Google Analytics Tracking Code
@@ -77,6 +81,9 @@ noise:
     googleplus:
     rss: /atom.xml
   fancybox: true
+  infinite_scroll: false
+  show_toc: true
+  toc_words: "Table of Contents"
   duoshuo: #duoshuo_shortname
   disqus: #disqus _shortname
   google_analytics: #Google Analytics Tracking Code
