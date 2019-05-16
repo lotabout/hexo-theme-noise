@@ -191,19 +191,23 @@ h2 {
 }
 
 article {
-    img, video {
+    img, video, object[type="image/svg+xml"] {
         max-width: 100%;
         border: 1px solid lightgray;
         display: block;
     }
 
-    img.no-border {
+    img.no-border, object[type="image/svg+xml"].no-border {
         border: none;
     }
 
-    img.center, video.center {
+    img.center, video.center, object[type="image/svg+xml"].center {
         margin: 0 auto;
         display: block;
+    }
+
+    img.full, video.full, object[type="image/svg+xml"].full {
+        width: 100%;
     }
 
     a {
