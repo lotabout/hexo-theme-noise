@@ -121,7 +121,11 @@ h4 .header-anchor::after {
         display: flex;
         justify-content: space-between;
         color: @color-ignore;
+        .post-time {
+            flex-shrink: 0;
+        }
         .post-tag-link {
+            display: inline-block;
             color: @color-ignore;
             margin: 0 4px;
             &::before {
