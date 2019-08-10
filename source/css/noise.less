@@ -197,8 +197,11 @@ h2 {
 article {
     img, video, object[type="image/svg+xml"] {
         max-width: 100%;
-        border: 1px solid lightgray;
         display: block;
+    }
+
+    img.border, object[type="image/svg+xml"].border {
+        border: 1px solid lightgray;
     }
 
     img.no-border, object[type="image/svg+xml"].no-border {
