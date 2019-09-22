@@ -438,18 +438,8 @@ article {
 
 // toc
 details {
-    user-select: none;
     padding-bottom: 1px;
-
     background: #EEE;
-
-    ol {
-        list-style: none;
-        padding-left: 40px;
-        ol, ul {
-            padding-left: 2em;
-        }
-    }
 
     summary {
         padding-left: 8px;
@@ -457,13 +447,44 @@ details {
         cursor: pointer;
     }
 
-    &[open] summary {
-        background: #DDD;
+    &[open] {
+        summary {
+            background: #DDD;
+        }
+
+        ol, ul {
+            padding-left: 40px;
+            ol, ul {
+                padding-left: 2em;
+            }
+        }
     }
 }
 
-details[open] summary ~ * {
-  animation: sweep .2s ease-in-out;
+details[open] summary + figure {
+    margin-top: 0;
+}
+
+details[open] > figure:last-child {
+    margin-bottom: 0;
+}
+
+.post-toc {
+    details {
+        user-select: none;
+
+        ol {
+            list-style: none;
+            padding-left: 40px;
+            ol, ul {
+                padding-left: 2em;
+            }
+        }
+    }
+
+    details[open] summary ~ * {
+      animation: sweep .2s ease-in-out;
+    }
 }
 
 @keyframes sweep {
