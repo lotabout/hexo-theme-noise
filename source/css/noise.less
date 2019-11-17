@@ -21,9 +21,9 @@
         --color-background: #444;
         --color-main-text: #e4e4e4;
         --color-main-text-light: #eeeeee;
-        --color-border: #111;
-        --color-border-light: #222;
-        --color-border-even-lighter: #333;
+        --color-border: #4F4F4F;
+        --color-border-light: #333;
+        --color-border-even-lighter: #2F2F2F;
         --color-near-white: #FAFAFA;
         --color-quote: #5DB1B4;
         --color-main-link: #83bee8;
@@ -251,8 +251,8 @@ h4 .header-anchor::after {
 }
 
 h2 {
-    border-bottom: 1px solid @color-ignore;
-    border-bottom: 1px solid var(--color-ignore);
+    border-bottom: 1px solid @color-border-light;
+    border-bottom: 1px solid var(--color-border-light);
     font-weight: 500;
     margin: 1em 0 .2em;
 }
@@ -288,8 +288,6 @@ article {
         opacity: 0.9;
 
         transition: all .2s;
-        border-bottom: .08em solid @color-ignore;
-        border-bottom: .08em solid var(--color-ignore);
         &:hover {
             border-bottom: .16em solid @color-main-link-hover;
             border-bottom: .16em solid var(--color-main-link-hover);
