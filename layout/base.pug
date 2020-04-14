@@ -29,13 +29,22 @@ html
     meta(content="yes", name="apple-mobile-web-app-capable")
     meta(content="black-translucent", name="apple-mobile-web-app-status-bar-style")
     meta(content="telephone=no", name="format-detection")
-    meta(name="description", content=config.description)
-    block title
+
+    if page.description
+      meta(name="description", content=page.description)
+    else if page.excerpt
+      meta(name="description", content=page.excerpt)
+    else if page.content
+      - var br = page.content.indexOf('</p>')
+      if br < 0
+        meta(name="description", content=page.content)
+      else
+        meta(name="description", content=page.content.substring(3, br))
+
     link(rel='stylesheet', type='text/css', href=root + 'css/normalize.css')
-    link(rel='stylesheet', type='text/css', href=root + 'css/highlight.css')
-    link(rel='stylesheet', type='text/css', href=root + 'css/font.css')
     link(rel='stylesheet', type='text/css', href=root + 'css/noise.css')
-    link(rel='stylesheet', type='text/css', href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css")
+
+    block title
 
     link(rel='Shortcut Icon', type='image/x-icon',href=url_for('favicon.ico'))
     if config.feed
@@ -52,6 +61,10 @@ html
   body
 
     block main
+
+    link(rel='stylesheet', type='text/css', href=root + 'css/highlight.css')
+    link(rel='stylesheet', type='text/css', href=root + 'css/font.css')
+    link(rel='stylesheet', type='text/css', href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css")
 
     if theme.fancybox
       link(rel='stylesheet', type='text/css', href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.css")
