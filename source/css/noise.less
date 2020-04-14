@@ -666,26 +666,20 @@ details[open] > figure:last-child {
 
 // archive
 .all-categories, .all-tags {
-    &::before {
-        font-family: FontAwesome;
-        float: left;
-        margin-right: 1em;
-    }
-
     ul.tag-box {
         list-style: none;
         display: flex;
         flex-wrap: wrap;
 
         li {
-            margin: .2em .2em;
+            margin-bottom: .4em;
+            margin-right: .4em;
             a {
                 display: inline;
                 text-decoration: none;
                 border: 1px dashed @color-border;
                 border: 1px dashed var(--color-border);
                 border-radius: 3px;
-                margin: .2em;
                 padding: .1em .3em;
                 outline: none;
 
@@ -716,15 +710,6 @@ details[open] > figure:last-child {
         font-size: .8em;
     }
 }
-
-.all-categories::before {
-    content: "\f07b";
-}
-
-.all-tags::before {
-    content: "\f02c";
-}
-
 
 // loading spinner
 .loading {
