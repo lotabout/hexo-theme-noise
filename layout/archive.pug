@@ -25,31 +25,9 @@ block main
   article.wrapper
     .post-entry
       if page.category || page.tag
-          h1.label-title=  (page.category || page.tag)
+        h1.label-title=  (page.category || page.tag)
       .post
-        .post-archive
-          -
-            function groupBy(collection, keyFunc) {
-              var result = {};
-              collection.forEach(function(x) {
-                  var key = keyFunc(x);
-                  if (hasOwnProperty.call(result, key)) {
-                    result[key].push(x);
-                  } else {
-                    result[key] = [x];
-                  }
-              });
-              return result;
-            }
-
-          each posts, year in groupBy(page.posts.toArray(), function(p){return -p.date.format('YYYY')})
-            h2= -year
-            ul.listing
-              for post in posts
-                li
-                  span.date= post.date.format('YYYY/MM/DD')
-                  a(href=url_for(post.path), title=post.title)
-                    = post.title
+        include _partial/postarchive.pug
 
         // show all categories and tags
         if !(page.category || page.tag)
