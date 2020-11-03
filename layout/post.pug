@@ -29,7 +29,7 @@ block main
       .container.post-header
         h1: = page.title
 
-      if (theme.show_toc_by_default && typeof page.toc === 'undefined') || page.toc
+      if (theme.show_toc_by_default && typeof page.toc === 'undefined' && toc(page.content)!='') || page.toc
         .container.post-toc
           details.toc
             summary.toc-accordion
