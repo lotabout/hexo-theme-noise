@@ -26,3 +26,21 @@ if theme.disqus
   | </script>
   | <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   | <a href="http://disqus.com" class="dsq-brlink">Blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+if theme.gitment.enable
+  link(rel="stylesheet", href="https://imsun.github.io/gitment/style/default.css")
+  script(src="https://imsun.github.io/gitment/dist/gitment.browser.js")
+  script.
+    const gitment = new Gitment({
+      id: '#{page.path}',
+      owner: '#{theme.gitment.owner}',
+      repo: '#{theme.gitment.repo}',
+      oauth: {
+        client_id: '#{theme.gitment.client_id}',
+        client_secret: '#{theme.gitment.client_secret}',
+      },
+    });
+    var comments = document.getElementsByClassName('post-comment');
+    if (comments.length) {
+      comments[0].appendChild(gitment.render());
+    }

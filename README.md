@@ -62,6 +62,12 @@ google_adsense_page_level_ads: #Google Adsense Page Level Ads Code
 - compact_index - Use "archive" style index page
 - duoshuo - [Duoshuo](http://duoshuo.com) shortname
 - disqus - [Disqus](https://disqus.com) shortname
+- gitment - comment system based on github issues
+  - owner - github user name
+  - repo - github repo to store comments
+  - oauth - github oauth info, see [instruction](https://github.com/imsun/gitment#2-register-an-oauth-application) for more details
+    - client_id
+    - client_secret
 - google_analytics - Google Analytics Tracking Code
 - google_adsense_page_level_ads - Google Adsense Page Level Ads Code
 
