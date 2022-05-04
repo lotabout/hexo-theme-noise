@@ -20,7 +20,8 @@ show_toc_by_default: true # to show toc if `toc:` is not specified in post
 compact_index: false # to use compact version of index page
 
 disqus: #disqus _shortname
-google_analytics: #Google Analytics Tracking Code
+google_analytics: #Google Analytics 4 Tracking Code
+google_analytics_legacy: #Google Analytics Tracking Code(Old version)
 google_adsense_page_level_ads: #Google Adsense Page Level Ads Code
 
 less:

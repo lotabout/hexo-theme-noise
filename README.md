@@ -43,7 +43,8 @@ show_toc: true
 toc_words: "Table of Contents"
 compact_index: false
 disqus: #disqus _shortname
-google_analytics: #Google Analytics Tracking Code
+google_analytics: #Google Analytics 4 Tracking Code
+google_analytics_legacy: #Google Analytics Tracking Code(Old version)
 google_adsense_page_level_ads: #Google Adsense Page Level Ads Code
 ```
 
@@ -60,7 +61,8 @@ google_adsense_page_level_ads: #Google Adsense Page Level Ads Code
 - toc_words - The words to show in the TOC line
 - compact_index - Use "archive" style index page
 - disqus - [Disqus](https://disqus.com) shortname
-- google_analytics - Google Analytics Tracking Code
+- google_analytics - Google Analytics 4 Tracking Code
+- google_analytics_legacy - Google Analytics Tracking Code (old)
 - google_adsense_page_level_ads - Google Adsense Page Level Ads Code
 
 If you want to contain this theme only as a submodule, then you may be
@@ -86,7 +88,8 @@ noise:
   toc_words: "Table of Contents"
   compact_index: false
   disqus: #disqus _shortname
-  google_analytics: #Google Analytics Tracking Code
+  google_analytics: #Google Analytics 4 Tracking Code
+  google_analytics_legacy: #Google Analytics Tracking Code(Old version)
   google_adsense_page_level_ads: #Google Adsense Page Level Ads Code
 ```
 
