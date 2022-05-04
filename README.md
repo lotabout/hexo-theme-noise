@@ -42,7 +42,6 @@ infinite_scroll: false
 show_toc: true
 toc_words: "Table of Contents"
 compact_index: false
-duoshuo: #duoshuo_shortname
 disqus: #disqus _shortname
 google_analytics: #Google Analytics Tracking Code
 google_adsense_page_level_ads: #Google Adsense Page Level Ads Code
@@ -60,7 +59,6 @@ google_adsense_page_level_ads: #Google Adsense Page Level Ads Code
 - show_toc - To show ToC if no `toc:` is specified in post
 - toc_words - The words to show in the TOC line
 - compact_index - Use "archive" style index page
-- duoshuo - [Duoshuo](http://duoshuo.com) shortname
 - disqus - [Disqus](https://disqus.com) shortname
 - google_analytics - Google Analytics Tracking Code
 - google_adsense_page_level_ads - Google Adsense Page Level Ads Code
@@ -87,7 +85,6 @@ noise:
   show_toc: true
   toc_words: "Table of Contents"
   compact_index: false
-  duoshuo: #duoshuo_shortname
   disqus: #disqus _shortname
   google_analytics: #Google Analytics Tracking Code
   google_adsense_page_level_ads: #Google Adsense Page Level Ads Code
