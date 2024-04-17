@@ -32,7 +32,5 @@ block main
       .container.post-content
         != page.content
 
-      // comment system
-      .container.post-comment
-        hr
-        include _partial/comments
+    .post-main.post-comment
+      include _partial/comments

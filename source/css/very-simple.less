@@ -481,3 +481,60 @@ article {
         }
     }
 }
+
+// archive
+.all-categories, .all-tags {
+    &::before {
+        font-family: FontAwesome;
+        float: left;
+        margin-right: 1em;
+    }
+
+    ul.tag-box {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+            margin: .2em .2em;
+            a {
+                display: inline;
+                text-decoration: none;
+                border: 1px dashed #CCC;
+                border-radius: 3px;
+                margin: .2em;
+                padding: .1em .3em;
+                outline: none;
+
+                transition: none;
+
+                span {
+                    font-size: 0.8em;
+                    border-left: 1px solid #CCC;
+                    margin-left: .3em;
+                    padding: 0 .3em;
+                }
+
+                &:hover {
+                    background: #666;
+                    color: #EEE;
+                }
+            }
+        }
+    }
+}
+
+.post-archive {
+    .date {
+        padding-right: 1em;
+        font-size: .8em;
+    }
+}
+
+.all-categories::before {
+    content: "\f07b";
+}
+
+.all-tags::before {
+    content: "\f02c";
+}
