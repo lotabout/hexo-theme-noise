@@ -4,66 +4,66 @@
 @import "_variables";
 
 // theme: night
-$highlight-background: #1d1f21;
-$highlight-current-line: #282a2e;
-$highlight-selection: #373b41;
-$highlight-foreground: #c5c8c6;
-$highlight-comment: #969896;
-$highlight-red: #cc6666;
-$highlight-orange: #de935f;
-$highlight-yellow: #f0c674;
-$highlight-green: #b5bd68;
-$highlight-aqua: #8abeb7;
-$highlight-blue: #81a2be;
-$highlight-purple : #b294bb;
+@highlight-background: #1d1f21;
+@highlight-current-line: #282a2e;
+@highlight-selection: #373b41;
+@highlight-foreground: #c5c8c6;
+@highlight-comment: #969896;
+@highlight-red: #cc6666;
+@highlight-orange: #de935f;
+@highlight-yellow: #f0c674;
+@highlight-green: #b5bd68;
+@highlight-aqua: #8abeb7;
+@highlight-blue: #81a2be;
+@highlight-purple : #b294bb;
 
 // theme: night eighties
-$highlight-background: #2d2d2d;
-$highlight-current-line: #393939;
-$highlight-selection: #515151;
-$highlight-foreground: #cccccc;
-$highlight-comment: #999999;
-$highlight-red: #f2777a;
-$highlight-orange: #f99157;
-$highlight-yellow: #ffcc66;
-$highlight-green: #99cc99;
-$highlight-aqua: #66cccc;
-$highlight-blue: #6699cc;
-$highlight-purple: #cc99cc;
+@highlight-background: #2d2d2d;
+@highlight-current-line: #393939;
+@highlight-selection: #515151;
+@highlight-foreground: #cccccc;
+@highlight-comment: #999999;
+@highlight-red: #f2777a;
+@highlight-orange: #f99157;
+@highlight-yellow: #ffcc66;
+@highlight-green: #99cc99;
+@highlight-aqua: #66cccc;
+@highlight-blue: #6699cc;
+@highlight-purple: #cc99cc;
 
 .code-block {
-    background: $highlight-background;
-    //margin: 0 $article-padding * -1;
+    background: @highlight-background;
+    //margin: 0 @article-padding * -1;
     margin: 2ex 0;
-    padding: 1rem $article-padding;
+    padding: 1rem @article-padding;
     border-style: solid;
     border-color: #333;
     border: 1px 0;
     border-radius: 2px;
     overflow: auto;
-    color: $highlight-foreground;
-    font-size: $font-size-code;
-    line-height: $line-height;
+    color: @highlight-foreground;
+    font-size: @font-size-code;
+    line-height: @line-height;
 }
 
 .line-numbers {
     color: #666;
-    font-size: $font-size-code;
+    font-size: @font-size-code;
 }
 
 article {
     pre, code {
-        font-family: $font-mono;
+        font-family: @font-mono;
     }
 
     code {
-        background: $color-background;
+        background: @color-background;
         text-shadow: 0 1px #fff;
         padding: 0 0.3rem;
     }
 
     pre {
-        @extend .code-block;
+        &:extend(.code-block);
         code {
             background: none;
             text-shadow: none;
@@ -72,7 +72,7 @@ article {
     }
 
     .highlight {
-        @extend .code-block;
+        &:extend(.code-block);
 
         pre {
             border: none;
@@ -88,48 +88,48 @@ article {
             padding: 0;
         }
         figcaption {
-            @extend .clearfix;
+            &:extend(.clearfix);
             font-size: 0.85em;
-            color: $highlight-comment;
+            color: @highlight-comment;
             line-height: 1em;
             margin-bottom: 1em;
         }
         a {
-            color: $highlight-aqua !important;
+            color: @highlight-aqua !important;
             text-decoration: none;
             float: right;
             &:hover {
-                color: $highlight-blue !important;
+                color: @highlight-blue !important;
 
             }
         }
         .gutter pre {
-            @extend .line-numbers;
+            &:extend(.line-numbers);
             text-align: right;
             padding-right: 20px;
         }
         .line {
-            height: $line-height;
+            height: @line-height;
         }
     }
 
     .gist-not-used {
-        //margin: 0 $article-padding * -1;
+        //margin: 0 @article-padding * -1;
         margin: 0;
         border-style: solid;
-        border-color: $color-border;
+        border-color: @color-border;
         border-width: 1px 0;
-        background: $highlight-background;
-        padding: 1em $article-padding 1em 2px;
+        background: @highlight-background;
+        padding: 1em @article-padding 1em 2px;
         .gist-file {
             border: none;
-            font-family: $font-mono;
+            font-family: @font-mono;
             margin: 0;
             .gist-data {
                 background: none;
                 border: none;
                 .line-numbers {
-                    @extend .line-numbers;
+                    &:extend(.line-numbers);
                     background: none;
                     border: none;
                     padding: 0 20px 0 0;
@@ -144,17 +144,17 @@ article {
                 border: none;
             }
             .gist-meta {
-                background: $highlight-background;
-                color: $highlight-comment;
-                font: 0.85em $font-sans;
+                background: @highlight-background;
+                color: @highlight-comment;
+                font: 0.85em @font-sans;
                 text-shadow: 0 0;
                 padding: 0;
                 margin-top: 1em;
-                margin-left: $article-padding;
+                margin-left: @article-padding;
                 //
             }
             a {
-                color: $color-link;
+                color: @color-link;
                 font-weight: normal;
                 &:hover {
                     text-decoration: underline;
@@ -173,7 +173,7 @@ article {
 pre {
     .comment,
     .title {
-        color: $highlight-comment;
+        color: @highlight-comment;
     }
     .variable,
     .attribute,
@@ -187,7 +187,7 @@ pre {
     .css .id,
     .css .class,
     .css .pseudo {
-        color: $highlight-red;
+        color: @highlight-red;
     }
     .number,
     .preprocessor,
@@ -195,12 +195,12 @@ pre {
     .literal,
     .params,
     .constant {
-        color: $highlight-orange;
+        color: @highlight-orange;
     }
     .class,
     .ruby .class .title,
     .css .rules .attribute {
-        color: $highlight-green;
+        color: @highlight-green;
     }
     .string,
     .value,
@@ -208,10 +208,10 @@ pre {
     .header,
     .ruby .symbol,
     .xml .cdata {
-        color: $highlight-green;
+        color: @highlight-green;
     }
     .css .hexcolor{
-        color: $highlight-aqua;
+        color: @highlight-aqua;
     }
     .function,
     .python .decorator,
@@ -221,10 +221,10 @@ pre {
     .perl .sub,
     .javascript .title,
     .coffeescript .title {
-        color: $highlight-blue;
+        color: @highlight-blue;
     }
     .keyword,
     .javascript .function {
-        color: $highlight-purple;
+        color: @highlight-purple;
     }
 }
