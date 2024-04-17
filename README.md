@@ -46,6 +46,8 @@ disqus: #disqus _shortname
 google_analytics: #Google Analytics 4 Tracking Code
 google_analytics_legacy: #Google Analytics Tracking Code(Old version)
 google_adsense_page_level_ads: #Google Adsense Page Level Ads Code
+extend_backtick_code: true
+fold_max_height: 300 #px # besides code tag, supports
 ```
 
 - menu - The navigation links on the header
@@ -64,6 +66,8 @@ google_adsense_page_level_ads: #Google Adsense Page Level Ads Code
 - google_analytics - Google Analytics 4 Tracking Code
 - google_analytics_legacy - Google Analytics Tracking Code (old)
 - google_adsense_page_level_ads - Google Adsense Page Level Ads Code
+- extend_backtick_cod: extend backtick code block to support [code tag](https://hexo.io/docs/tag-plugins#Code-Block) args
+- fold_max_height: besides code tags's args, we support `fold:true` to fold long code blocks
 
 If you want to contain this theme only as a submodule, then you may be
 unwilling to keep all configuration inside theme

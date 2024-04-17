@@ -18,6 +18,8 @@ infinite_scroll: false # set to true if you want to use it
 toc_words: "Table of Contents" # the line shown in toc
 show_toc_by_default: true # to show toc if `toc:` is not specified in post
 compact_index: false # to use compact version of index page
+extend_backtick_code: true
+fold_max_height: 300 #px
 
 disqus: #disqus _shortname
 google_analytics: #Google Analytics 4 Tracking Code
