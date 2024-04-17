@@ -14,25 +14,25 @@ block main
             a.article-gallery-img.fancybox(href=url_for(photo), rel="gallery_" + page._id)
               img(src=url_for(photo), itemprop="image")
 
-  article.post-main.wrapper
+  article.wrapper
+    .post-main
+      .nav
+        nav.container
+          each nav, name in theme.menu
+            +a_with_current(nav, __(name))
+        .container.post-meta
+          if (page.tags && page.tags.length)
+            .post-tags
+              != list_tags(page.tags, {show_count: false, class: 'post-tag', style:'none', separator:''})
+          .post-time= page.date.format(config.date_format)
 
-    .nav
-      nav.container
-        each nav, name in theme.menu
-          +a_with_current(nav, __(name))
-      .container.post-meta
-        if (page.tags && page.tags.length)
-          .post-tags
-            != list_tags(page.tags, {show_count: false, class: 'post-tag', style:'none', separator:''})
-        .post-time= page.date.format(config.date_format)
+      .container.post-header
+        h1: = page.title
 
-    .container.post-header
-      h1: = page.title
+      .container.post-content
+        != page.content
 
-    .container.post-content
-      != page.content
-
-    // comment system
-    .container.post-comment
-      hr
-      include _partial/comments
+      // comment system
+      .container.post-comment
+        hr
+        include _partial/comments
