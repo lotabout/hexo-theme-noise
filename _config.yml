@@ -19,7 +19,6 @@ toc_words: "Table of Contents" # the line shown in toc
 show_toc_by_default: true # to show toc if `toc:` is not specified in post
 compact_index: false # to use compact version of index page
 
-duoshuo: #duoshuo_shortname
 disqus: #disqus _shortname
 google_analytics: #Google Analytics Tracking Code
 google_adsense_page_level_ads: #Google Adsense Page Level Ads Code
