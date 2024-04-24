@@ -51,7 +51,7 @@ block main
                 .post-meta
                   if (post.tags && post.tags.length)
                     .post-tags
-                      != list_tags(post.tags, {show_count: false, class: 'post-tag', style:'none', separator:''})
+                      != list_tags(post.tags, {show_count: false, class: 'post-tag', style:'noise', separator:''})
                   .post-time= post.date.format(config.date_format)
 
     if !theme.infinite_scroll
