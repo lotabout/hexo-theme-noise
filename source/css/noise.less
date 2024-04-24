@@ -7,6 +7,7 @@
     --color-border: @color-border;
     --color-border-light: @color-border-light;
     --color-border-even-lighter: @color-border-even-lighter;
+    --color-border-dark: @color-border-dark;
     --color-near-white: @color-near-white;
     --color-quote: @color-quote;
     --color-main-link: @color-main-link;
@@ -25,6 +26,7 @@
         --color-border: #4F4F4F;
         --color-border-light: #333;
         --color-border-even-lighter: #2F2F2F;
+        --color-border-dark: #666;
         --color-near-white: #FAFAFA;
         --color-quote: #5DB1B4;
         --color-main-link: #83bee8;
@@ -759,4 +761,19 @@ details[open] > figure:last-child {
   display: block;
   overflow-y: scroll;
   max-height: var(--code-block-max-height);
+}
+
+.noise-code-block table::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+  height: 7px;
+}
+
+.noise-code-block table::-webkit-scrollbar-thumb {
+  background-color: var(--color-border-dark);
+  border-radius: 7px;
+}
+
+.noise-code-block table::-webkit-scrollbar-corner {
+  background-color: transparent;
 }
