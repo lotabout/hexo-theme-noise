@@ -26,7 +26,7 @@ const escapeSwigTag = (str) => str.replace(/{/g, '&#123;').replace(/}/g, '&#125;
 const rLangCaptionUrlTitle = /([^\s]+)\s+(\S[\S\s]*)\s+(https?:\/\/\S+)\s+(.+)/i;
 const rLangCaptionUrl = /([^\s]+)\s+(\S[\S\s]*)\s+(https?:\/\/\S+)/i;
 const rLangCaption = /([^\s]+)\s+(\S[\S\s]*)/;
-const rLang = /([^\s]+)\s+/;
+const rLang = /([^\s]+)\s*/;
 
 function parseArgs(args) {
   const _else = [];
