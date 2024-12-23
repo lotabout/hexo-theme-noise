@@ -31,3 +31,4 @@ less:
     - source/css
   compress:
     true
+js: js

@@ -63,13 +63,13 @@ html
 
     block main
 
-    link(rel='stylesheet', type='text/css', href="//cdn.bootcdn.net/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css")
+    link(rel='stylesheet', type='text/css', href=root + 'css/third-party/font-awesome/4.5.0/font-awesome.min.css')
     link(rel='stylesheet', type='text/css', href="//cdn.bootcdn.net/ajax/libs/lato-font/3.0.0/css/lato-font.min.css")
 
     if theme.fancybox
       link(rel='stylesheet', type='text/css', href="//cdn.bootcdn.net/ajax/libs/fancybox/2.1.5/jquery.fancybox.css")
-      script(src="//cdn.bootcdn.net/ajax/libs/jquery/2.0.3/jquery.min.js")
-      script(src="//cdn.bootcdn.net/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js")
+      script(src=root + 'js/third-party/jquery/2.0.3/jquery.min.js')
+      script(src=root + 'js/third-party/fancybox/2.1.5/jquery.fancybox.pack.js')
 
       script.
         $(document).ready(function() {
