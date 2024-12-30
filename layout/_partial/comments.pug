@@ -13,3 +13,22 @@ if theme.disqus
   | </script>
   | <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   | <a href="http://disqus.com" class="dsq-brlink">Blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+if theme.giscus.enabled
+  #giscus_thread
+  | <script src="https://giscus.app/client.js"
+  |         data-repo="#{theme.giscus.repo}"
+  |         data-repo-id="#{theme.giscus.repo_id}"
+  |         data-category="#{theme.giscus.category}"
+  |         data-category-id="#{theme.giscus.category_id}"
+  |         data-mapping="#{theme.giscus.mapping}"
+  |         data-strict="#{theme.giscus.strict}"
+  |         data-reactions-enabled="#{theme.giscus.reactions}"
+  |         data-emit-metadata="#{theme.giscus.emit_metadata}"
+  |         data-input-position="#{theme.giscus.input_position}"
+  |         data-theme="#{theme.giscus.theme}"
+  |         data-lang="#{theme.giscus.lang}"
+  |         data-loading="#{theme.giscus.loading}"
+  |         crossorigin="#{theme.giscus.crossorigin}"
+  |         async>
+  | </script>

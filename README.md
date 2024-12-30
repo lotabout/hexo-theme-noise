@@ -48,6 +48,21 @@ google_analytics_legacy: #Google Analytics Tracking Code(Old version)
 google_adsense_page_level_ads: #Google Adsense Page Level Ads Code
 extend_backtick_code: true
 fold_max_height: 300 #px # besides code tag, supports
+giscus:
+  enabled: false #Enable Giscus
+  repo: #GitHub repository name
+  repo_id: #GitHub repository ID
+  category: #Category ID
+  category_id: #Category ID
+  mapping: "pathname" # mapping by which field?
+  strict: 0 #Enable strict matching mode
+  reactions: 1 #Enable reactions: 0 - disable, 1 - enable
+  emit_metadata: 0 #Enable metadata
+  input_position: "bottom" #Comment box position
+  theme: "light" #Theme
+  lang: "en" #Language
+  loading: "lazy" #Loading mode
+  crossorigin: "anonymous" #Enable cross-origin requests
 ```
 
 - menu - The navigation links on the header
@@ -68,13 +83,14 @@ fold_max_height: 300 #px # besides code tag, supports
 - google_adsense_page_level_ads - Google Adsense Page Level Ads Code
 - extend_backtick_cod: extend backtick code block to support [code tag](https://hexo.io/docs/tag-plugins#Code-Block) args
 - fold_max_height: besides code tags's args, we support `fold:true` to fold long code blocks
+- giscus: Giscus comment system. Check the meaning of each field in [Giscus](https://giscus.app/).
 
 If you want to contain this theme only as a submodule, then you may be
 unwilling to keep all configuration inside theme
 folder(`noise/_config.yml`). In this case, you can keep the
 configurations in root configuration file `/_config.yml` by:
 
-```
+```yaml
 # /_config.yml
 noise:
   menu:
@@ -95,6 +111,22 @@ noise:
   google_analytics: #Google Analytics 4 Tracking Code
   google_analytics_legacy: #Google Analytics Tracking Code(Old version)
   google_adsense_page_level_ads: #Google Adsense Page Level Ads Code
+
+  giscus:
+    enabled: false #Enable Giscus
+    repo: #GitHub repository name
+    repo_id: #GitHub repository ID
+    category: #Category ID
+    category_id: #Category ID
+    mapping: "pathname" # mapping by which field?
+    strict: 0 #Enable strict matching mode
+    reactions: 1 #Enable reactions: 0 - disable, 1 - enable
+    emit_metadata: 0 #Enable metadata
+    input_position: "bottom" #Comment box position
+    theme: "light" #Theme
+    lang: "en" #Language
+    loading: "lazy" #Loading mode
+    crossorigin: "anonymous" #Enable cross-origin requests
 ```
 
 ## Features

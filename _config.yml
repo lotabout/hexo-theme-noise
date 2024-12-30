@@ -26,6 +26,22 @@ google_analytics: #Google Analytics 4 Tracking Code
 google_analytics_legacy: #Google Analytics Tracking Code(Old version)
 google_adsense_page_level_ads: #Google Adsense Page Level Ads Code
 
+giscus:
+  enabled: false #Enable Giscus
+  repo: #GitHub repository name
+  repo_id: #GitHub repository ID
+  category: #Category ID
+  category_id: #Category ID
+  mapping: "pathname" # mapping by which field?
+  strict: 0 #Enable strict matching mode
+  reactions: 1 #Enable reactions: 0 - disable, 1 - enable
+  emit_metadata: 0 #Enable metadata
+  input_position: "bottom" #Comment box position
+  theme: "light" #Theme
+  lang: "en" #Language
+  loading: "lazy" #Loading mode
+  crossorigin: "anonymous" #Enable cross-origin requests
+
 less:
   paths:
     - source/css
